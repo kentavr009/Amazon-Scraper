@@ -7,10 +7,11 @@
 <p>And for now the script can help someone at least in its limited functionality.</p>
 <p>So, let's take the script apart piece by piece!</p>
 <H2>Preparation</H2>
-<p>Firstly, the script imports the modules needed to complete the task</p>
-<pre>
+<p>Firstly, the script imports the modules needed to complete the task:</p>
+
+```python
 from selenium import webdriver
- from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -18,13 +19,15 @@ import csv
 import os
 from time import sleep
 import requests
-</pre>
+```
 <p>Let's take it apart in parts:</p>
 <pre>
- from selenium import webdriver 
+from selenium import webdriver 
 </pre>
 <p>That imports the <cod>webdriver</cod> class, which allows you to control the browser (in my case Firefox) through the script</p>
-<pre>from selenium.webdriver.common.by import By</pre>
+<pre>
+ from selenium.webdriver.common.by import By
+</pre>
 <p>That imports the <cod>By</cod> class, with which the script will search for elements to parse by XPath (it can search for other attributes, but in this case <cod>Xpath</cod> will be used)</p>
 <pre>from selenium.webdriver.common.keys import Keys</pre>
 <p>That imports the <cod>Keys</cod> class, which will be used to simulate keystrokes, in the case of this script, it will scroll the page down <cod>Keys.PAGE_DOWN</cod></p>
